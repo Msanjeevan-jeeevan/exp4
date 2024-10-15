@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Food Delivery</h1>
+        <nav>
+            <a href="https:www.swiggy.com">Restaurants</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="restaurants">
+            <center> <h2>Available Restaurants</h2></center>
+            <div class="restaurant" onclick="viewMenu('Pasta Place')">
+                <h3>Pasta Place</h3>
+                <p>Italian cuisine</p>
+            </div>
+            <div class="restaurant" onclick="viewMenu('Sushi Spot')">
+                <h3>Sushi Spot</h3>
+                <p>Japanese cuisine</p>
+            </div>
+        </section>
+
+        <section id="menu" style="display: none;">
+            <h2 id="menuTitle"></h2>
+            <div class="menu-item">
+                <span>Spaghetti</span>
+                <button onclick="addToCart('Spaghetti', 10)">Add to Cart - $10</button>
+            </div>
+            <div class="menu-item">
+                <span>Lasagna</span>
+                <button onclick="addToCart('Lasagna', 12)">Add to Cart - $12</button>
+            </div>
+            <div class="menu-item">
+                <span>Sushi Roll</span>
+                <button onclick="addToCart('Sushi Roll', 8)">Add to Cart - $8</button>
+            </div>
+            <div class="menu-item">
+                <span>Sashimi</span>
+                <button onclick="addToCart('Sashimi', 15)">Add to Cart - $15</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <p id="totalPrice">Total: $0</p>
+            <button onclick="placeOrder()">Place Order</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food Delivery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
